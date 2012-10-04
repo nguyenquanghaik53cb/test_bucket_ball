@@ -1,0 +1,57 @@
+/* Tiny Carousel */
+#zenclerk_helpbox #slider {
+ overflow:hidden; padding: 0 0 10px;
+}
+#zenclerk_helpbox #slider .viewport {
+ float: left;
+ width: 660px;
+ height: 160px;
+ overflow: hidden;
+ position: relative;
+}
+#zenclerk_helpbox #slider .buttons {
+ background:url("http://o1.zenclerk.com/ui/image/miscellaneous_sprite.png") no-repeat scroll 0 0;
+ display: block;
+ margin: 50px 10px 0 0;
+ background-position: 0 0;
+ text-indent: -999em;
+ float: left;
+ width: 45px;
+ height: 45px;
+ overflow: hidden;
+ position: relative;
+}
+#zenclerk_helpbox #slider .buttons:hover {
+ background-position: 0 -50px;
+}
+#zenclerk_helpbox #slider .next {
+    background-position: -50px 0;
+    margin: 50px 0 0 10px;
+}
+#zenclerk_helpbox #slider .next:hover {
+ background-position: -50px -50px;
+}
+#zenclerk_helpbox #slider .disable {
+ visibility: hidden;
+}
+#zenclerk_helpbox #slider .overview {
+ margin: 20px 20px 20px 0;
+ list-style: none;
+ position: absolute;
+ padding: 0;
+ width: 240px;
+ left: 0;
+ top: 0;
+}
+#zenclerk_helpbox #slider .overview li{
+ float: left;
+ margin: 0 20px 0 0;
+ padding: 1px;
+ border: 1px;
+ solid #dcdcdc;
+ width: 110px;
+}
+#zenclerk_helpbox #slider .overview li img{ 
+ height: 110px;
+
+}

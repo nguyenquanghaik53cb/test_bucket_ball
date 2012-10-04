@@ -1,0 +1,51 @@
+(function(){
+  "use strict";
+  var server_url = '<%= @server.url %>';
+  var apikey  = '<%= @apikey %>';
+  var uuidkey = '<%= @uuid %>';
+  var usidkey = '<%= @usid %>';
+
+  <% if @company.jquery %>
+    <%= raw render partial: "jquery" %>
+    var $ = __znclerk__jQuery;
+    var jQuery =  __znclerk__jQuery;
+  <% end %>
+
+  var untrack = function(){
+    var url = window.location.toString();
+    <% @company.url_matches.select{|e| e.untrack == true}.each do |match| %>
+      if(url.match( /<%=raw match.match %>/ )){
+        return true;
+      }
+    <% end %>
+    return false;
+  };
+
+  var thumbnail_collector = function(){
+    <%=raw @plugin_combination.thumbnail_collector %>;
+  };
+
+  var content_analyzer = function(){
+    <%=raw @plugin_combination.content_analyzer %>;
+  };
+
+  var plugin = function(socket){
+    <% @plugins.each do |plugin|%>
+      <%=raw render partial: plugin %>;
+    <% end %>
+  };
+  
+  var particular_event = function(){
+    var url = window.location.toString();
+    <% @company.url_matches.each do |match| %>
+      if(url.match( /<%=raw match.match %>/ )){
+      <% match.particular_events.each do |event| %>
+        <%=raw event.content %>;
+      <% end %>
+      }
+    <% end %>
+  };
+
+  <%=raw render partial: "core.js.coffee" %>
+
+}).call(this);

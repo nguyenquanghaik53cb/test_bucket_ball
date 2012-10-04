@@ -1,0 +1,35 @@
+<%- model_class = @company.class -%>
+<h1><%=t '.title', :default => model_class.model_name.human %></h1>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @company.name %></dd>
+</dl>
+
+<p>
+  <b>JS File: you should embed on your site</b>
+  <pre><%= script_publish_path(@company) %></pre>
+</p>
+<p>
+  <b>Base url:</b>
+  <pre><%= "" %> </pre>
+</p>
+<p>
+  <b>untrack urls:</b>
+  <% 3.times do%>
+  <pre><%= "" %> </pre>
+  <% end %>
+</p>
+
+<p>
+  <b>event urls:</b>
+  <% 3.times do%>
+  <pre>Event: <%= "" %> </pre>
+  <% end %>
+</p>
+
+
+<div class="form-actions">
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_company_path(@company), :class => 'btn' %>
+</div>

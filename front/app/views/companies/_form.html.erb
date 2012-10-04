@@ -1,0 +1,39 @@
+<%= form_for @company, :html => { :class => 'form-horizontal' } do |f| %>
+
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name,class:"span8"%>
+  </p>
+
+  <p>
+    <lable>Base url:</label><br>
+    <div class="input-prepend">
+      <span class="add-on">http://</span><%= text_field :foo, :base_url, class:"span8" %>
+    </div>
+  </p>
+
+  <p>
+    <lable>untrack urls:</label><br>
+    <div class="input-prepend">
+      <span class="add-on">http://</span><%= text_field :foo, :untrack_url, class:"span8" %>
+    </div>
+  </p>
+
+  <p>
+    <lable>track event:</label><br>
+    <% 3.times do %>
+      <div>
+        <%= select :foo, :select , [:mouse_over, :click]%>
+        <%= text_field :foo, :tack_event, placeholder: "jQuery('#ID .class')" %>
+      </div>
+    <% end %>
+  </p>
+
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                company_path, :class => 'btn' %>
+  </div>
+<% end %>
+

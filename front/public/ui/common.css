@@ -1,0 +1,164 @@
+/*
+body {
+  margin: 0;
+  padding: 0;
+  background: url(../img/bg_body.gif) repeat 0 0;
+  font-family: 'Lucida Grande', 'Arial', 'Hiragino Kaku Gothic Pro', 'メイリオ', sans-serif;
+}
+*/
+
+/*
+ul,
+li {
+  list-style: none;
+}
+*/
+/* For modern browsers */
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+  zoom: 1;
+}
+.clear {
+  clear: both;
+}
+/*
+p {
+  margin: 0;
+  padding: 0;
+}
+*/
+#wrap {
+  background: #ccc;
+  height: 2000px;
+}
+#wrap .title {
+  text-align: center;
+  font-weight: bold;
+  padding: 100px;
+}
+#wrap .title p {
+  font-size: 200%;
+}
+#helpbox {
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  width: 100%;
+  background: #f8f8f8;
+  margin: 0;
+  padding: 0;
+  background: url(../img/bg_body.gif) repeat 0 0;
+  font-family: 'Lucida Grande', 'Arial', 'Hiragino Kaku Gothic Pro', 'メイリオ', sans-serif;
+
+}
+#helpbox p{
+  margin: 0;
+  padding: 0;
+
+
+}
+#helpbox .inbox {
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-bottom: none; 
+}
+#helpbox .inbox .titlebar {
+  background: #333;
+  color: #fff;
+  background-image:-moz-linear-gradient(top,rgba(255,255,255,.40),rgba(235,235,235,.05));
+}
+#helpbox .inbox .titlebar .title {
+  float: left;
+}
+#helpbox .inbox .titlebar .push {
+  align: right;
+  float: right;
+  text-align: right;
+
+}
+#helpbox .inbox .titlebar .selecttitle {
+  width: 680px;
+  float: left;
+  padding: 5px 10px;
+}
+#helpbox .inbox .titlebar .chattitle {
+  width: 239px;
+  padding: 5px 10px;
+  float: right;
+  border-left: 1px solid #ccc;
+}
+#helpbox .inbox .titlebar .chattitle .put a {
+  display: block;
+}
+#helpbox .inbox .selectbox {
+  width: 980px;
+  float: left;
+}
+#helpbox .inbox .selectbox .itembox {
+  width: 100%;
+  padding: 10px;
+}
+#helpbox .inbox .selectbox .itembox .item {
+  width: 120px;
+  float: left;
+  margin: 0 20px 0 0;
+  position: relative;
+}
+#helpbox .inbox .selectbox .itembox .item .btn_close {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  cursor: pointer;
+  display: block;
+  background: #333333;
+  color: #fff;
+  border-radius: 30px;
+  border: 2px solid #fff;
+  font-size: 9px;
+  padding: 2px 4px;
+  text-decoration: none;
+}
+/*
+#helpbox .inbox .selectbox .itembox .item .btn_close a {
+  display: block;
+  background: #333333;
+  color: #fff;
+  border-radius: 30px;
+  border: 2px solid #fff;
+  font-size: 8px;
+  padding: 2px 4px;
+  text-decoration: none;
+}
+*/
+#helpbox .inbox .selectbox .itembox .item .img {
+  margin: 0 0 10px 0;
+}
+#helpbox .inbox .selectbox .itembox .item .price {
+  text-align: right;
+}
+#helpbox .inbox .chatbox {
+  width: 259px;
+  float: right;
+  padding: 0;
+  border-left: 1px solid #ccc;
+}
+#helpbox .inbox .chatbox .stream {
+  height: 100px;
+  overflow: auto;
+  margin: 10px 10px 0 10px;
+  text-align: left;
+}
+#helpbox .inbox .chatbox .textarea {
+  padding: 10px 10px 0 10px;
+}
+

@@ -1,0 +1,8 @@
+
+<% @company.tracking_js_events.each_with_index do |track,i| %>
+  jQuery("<%= track.hook %>").<%= track.event %>(
+    function(){
+      socket.emit('jsevent',{name:'<%= track.name %>',score:'<%= track.score %>'});
+    }
+  );
+ <% end %>
